@@ -1,0 +1,288 @@
+<html><head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script type="text/javascript" src="../js/ajax/libs/jquery/jquery.min.js"></script>
+    <script type="text/javascript" src="../js/bootstrap.min.js"></script>
+    <link href="css/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+    <link href="css/page_pingendo.css" rel="stylesheet" type="text/css">
+    <link href="css/plugins/chosen/chosen.css" rel="stylesheet">
+    <link href="css/plugins/awesome-bootstrap-checkbox/awesome-bootstrap-checkbox.css" rel="stylesheet">
+    <link href="css/plugins/iCheck/custom.css" rel="stylesheet">
+  </head><body class="hidden-md hidden-sm hidden-xs" data-spy="scroll">
+    <div class="navbar navbar-default navbar-static-top">
+      <div class="container">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-ex-collapse">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+        </div>
+        <div class="collapse navbar-collapse" id="navbar-ex-collapse">
+          <ul class="nav navbar-nav navbar-right">
+            <li class="active">
+              <a href="dashboard.php">Inicio</a>
+            </li>
+
+          </ul>
+          <ul class="lead nav navbar-left navbar-nav">
+            <li>
+              <a href="dashboard.php">ITIL QUIZ GAME <img src="img/itil_process.png" width="20"></a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div class="section">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-12 text-center">
+            <i class="fa fa-3x fa-fw fa-bookmark-o"></i>
+          </div>
+        </div>
+        <div class="row">
+          <div align="center"></div>
+          <div class="col-md-12" align="center">
+            <h1>Regras</h1>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Chosen-->
+    <script src="js/plugins/chosen/chosen.jquery.js"></script>
+    <!-- iCheck -->
+    <script src="js/plugins/iCheck/icheck.min.js"></script>
+    <script>
+      $(document).ready(function(){
+                                                                                      $('.i-checks').iCheck({
+                                                                                          checkboxClass: 'icheckbox_square-green',
+                                                                                          radioClass: 'iradio_square-green'
+                                                                                      });
+
+                                                                                      var config = {
+                                                                                              '.chosen-select'           : {},
+                                                                                              '.chosen-select-deselect'  : {allow_single_deselect:true},
+                                                                                              '.chosen-select-no-single' : {disable_search_threshold:10},
+                                                                                              '.chosen-select-no-results': {no_results_text:'Oops, Não encontrei!, tente diferente'},
+                                                                                              '.chosen-select-width'     : {width:"99%"}
+                                                                                              }
+                                                                                          for (var selector in config) {
+                                                                                              $(selector).chosen(config[selector]);
+                                                                                          }
+                                                                                        });
+    </script>
+    <div class="section">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-6">
+            <img src="img/itil_process.png" class="img-responsive">
+          </div>
+          <div class="col-md-6">
+            <h1 class="text-warning">ITIL QUIZ GAME</h1>
+            <p class="lead text-justify">É um jogo de perguntas e respostas
+
+        </div>
+      </div>
+    </div>
+    <div class="section">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-6">
+            <h1 class="text-danger text-left">Ajudas</h1>
+            <h3>O candidato conta com vários tipos de ajuda:</h3>
+            <ol class="lead" contenteditable="false">
+              <li>
+                <b>Universitários</b>&nbsp;- Três estudantes de diversas&nbsp; faculdades
+                davam suas respostas à pergunta e cabia ao participante confiar ou não.</li>
+              <li>
+                <b>Placas</b>&nbsp;- Uma pequena platéia levantava placas numeradas, referentes
+                à alternativa correta. Por exemplo, para a terceira alternativa, levantavam
+                a placa de número 3.</li>
+              <li>
+                <b>Cartas</b>- Quatro cartas de baralho eram viradas e o participante escolhia
+                uma. Se tirasse:
+                <ul>
+                  <li>
+                    <b>Rei</b>: Nenhuma alternativa errada era eliminada.</li>
+                  <li>
+                    <b>Ás</b>: Elimina uma alternativa.</li>
+                  <li>
+                    <b>2</b>: Elimina duas alternativas.</li>
+                  <li>
+                    <b>3</b>: Elimina todas as três alternativas erradas, restando apenas a correta.</li>
+                  <li></li>
+                </ul>
+              </li>
+              <li>
+                <b>Pulos</b>- O participante poderia "pular" a pergunta caso não soubesse
+                a resposta. Poderia utilizar deste recurso até três vezes.</li>
+              <br>
+              <p>Na pergunta final, nenhuma das ajudas poderia ser usada.</p>
+            </ol>
+          </div>
+          <div class="col-md-6">
+            <img src="img/ops.png" class="img-responsive">
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="section">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-6">
+            <img src="img/premio_icon.jpg" class="img-responsive">
+          </div>
+          <div class="col-md-6">
+            <div></div>
+            <div></div>
+            <h1 class="text-center text-warning">Prêmios</h1><table class="table table-condensed table-striped">
+              <thead>
+                <tr>
+                  <th class="active">#</th>
+                  <th class="success">Acertar</th>
+                  <th class="warning">Parar</th>
+                  <th class="danger">Errar</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td class="info">1</td>
+                  <td class="info">R$ 1 mil</td>
+                  <td class="info">R$ 0</td>
+                  <td class="info">R$ 0</td>
+                </tr>
+                <tr>
+                  <td class="active">2</td>
+                  <td class="active">R$ 2 mil</td>
+                  <td class="active">R$ 1 mil</td>
+                  <td class="active">R$ 500</td>
+                </tr>
+                <tr>
+                  <td class="info">3</td>
+                  <td class="info">R$ 3 mil</td>
+                  <td class="info">R$ 2 mil</td>
+                  <td class="info">R$ 1 mil</td>
+                </tr>
+                <tr>
+                  <td class="active">4</td>
+                  <td class="active">R$ 4 mil</td>
+                  <td class="active">R$ 3 mil</td>
+                  <td class="active">R$ 1.500</td>
+                </tr>
+                <tr>
+                  <td class="info">5</td>
+                  <td class="info">R$ 5 mil</td>
+                  <td class="info">R$ 4 mil</td>
+                  <td class="info">R$ 2 mil</td>
+                </tr>
+                <tr>
+                  <td class="active">6</td>
+                  <td class="active">R$ 10 mil</td>
+                  <td class="active">R$ 5 mil</td>
+                  <td class="active">R$ 2.500</td>
+                </tr>
+                <tr>
+                  <td class="info">7</td>
+                  <td class="info">R$ 20 mil</td>
+                  <td class="info">R$ 10 mil</td>
+                  <td class="info">R$ 5 mil</td>
+                </tr>
+                <tr class="active">
+                  <td class="active">8</td>
+                  <td class="active">R$ 30 mil</td>
+                  <td class="active">R$ 20 mil</td>
+                  <td class="active">R$ 10 mil</td>
+                </tr>
+                <tr class="info">
+                  <td>9</td>
+                  <td>R$ 40 mil</td>
+                  <td>R$ 30 mil</td>
+                  <td>R$ 15 mil</td>
+                </tr>
+                <tr class="active">
+                  <td>10</td>
+                  <td>R$ 50 mil</td>
+                  <td>R$ 40 mil</td>
+                  <td>R$ 20 mil</td>
+                </tr>
+                <tr class="info">
+                  <td>11</td>
+                  <td>R$ 100 mil</td>
+                  <td>R$ 50 mil</td>
+                  <td>R$ 25 mil</td>
+                </tr>
+                <tr class="active">
+                  <td class="active">12</td>
+                  <td>R$ 200 mil</td>
+                  <td>R$ 100 mil</td>
+                  <td>R$ 50 mil</td>
+                </tr>
+                <tr class="info">
+                  <td>13</td>
+                  <td>R$ 300 mil</td>
+                  <td>R$ 200 mil</td>
+                  <td>R$ 100 mil</td>
+                </tr>
+                <tr class="active">
+                  <td>14</td>
+                  <td>R$ 400 mil</td>
+                  <td>R$ 300 mil</td>
+                  <td>R$ 150 mil</td>
+                </tr>
+                <tr class="info">
+                  <td>15</td>
+                  <td>R$ 500 mil</td>
+                  <td>R$ 400 mil</td>
+                  <td>R$ 200 mil</td>
+                </tr>
+                <tr class="active">
+                  <td class="active">16</td>
+                  <td>R$ 1 milhão</td>
+                  <td>R$ 500 mil</td>
+                  <td>
+                    <b>R$ 0</b>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+    </div>
+    <footer class="section section-primary">
+      <div class="container">
+        <div class="row">
+          <div class="col-sm-6">
+            <h1>ITIL QUIZ GAME
+              <img src="img/itil_process.png" width="50">
+            </h1>
+          </div>
+          <div class="col-sm-6">
+            <p class="text-info text-right">
+              <br>
+              <br>
+            </p>
+            <div class="row">
+              <div class="col-md-12 hidden-lg hidden-md hidden-sm text-left">
+                <a href="#"><i class="fa fa-3x fa-fw fa-instagram text-inverse"></i></a>
+                <a href="#"><i class="fa fa-3x fa-fw fa-twitter text-inverse"></i></a>
+                <a href="#"><i class="fa fa-3x fa-fw fa-facebook text-inverse"></i></a>
+                <a href="#"><i class="fa fa-3x fa-fw fa-github text-inverse"></i></a>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-md-12 hidden-xs text-right">
+                <a href="#"><i class="fa fa-3x fa-fw fa-instagram text-inverse"></i></a>
+                <a href="#"><i class="fa fa-3x fa-fw fa-twitter text-inverse"></i></a>
+                <a href="#"><i class="fa fa-3x fa-fw fa-facebook text-inverse"></i></a>
+                <a href="#"><i class="fa fa-3x fa-fw fa-github text-inverse"></i></a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+
+</body></html>
