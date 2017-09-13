@@ -49,6 +49,12 @@ app.get('/gamelist', function(req,res){
 
 app.get('/ajuda',function(req, res){
  res.render('jogos/ajuda');
-})
+});
+
+app.get('/resultado/:score',function(req, res){
+  var pontos = req.params.score;
+  console.log(pontos);
+ res.render('jogos/teste',{pontos});
+});
 
 module.exports = app;

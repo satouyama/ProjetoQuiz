@@ -86,14 +86,14 @@
         }
       });
 
-      score = ((itemCount - wrong.length) / itemCount).toFixed(2) * 100 + "%";
-      if(score >= 50 + "%"){
-            $scoreEl.text("Perfect score " + score).addClass('new-score');
+      score = ((itemCount - wrong.length) * + 1000);
+      acertos = (itemCount - wrong.length);
+
+            $scoreEl.text("você acertou " + acertos + " você ganhou " + "$" + score).addClass('new-score');
               $('html,body').animate({scrollTop: 0}, 50);
-      }else{
-        $scoreEl.text("azedou " + score).addClass('new-score');
-          $('html,body').animate({scrollTop: 0}, 50);
-      }
+              window.location.assign("/resultado/" + score);
+
+
     }
 
   }
