@@ -9,6 +9,7 @@ app.use(express.static('./public'));
 //body-parser config
 app.use(bodyParser.json());
 
+app.use(bodyParser.urlencoded({extended : true}));
 //set the view for ejs
 app.set('view engine','ejs');
 
@@ -51,15 +52,41 @@ app.get('/dashbord', function(req, res){
 app.get('/gamelist', function(req,res){
  res.render('jogos/GameList');
 });
-
+// router game help
 app.get('/ajuda',function(req, res){
  res.render('jogos/ajuda');
 });
+//router get cadastro
+app.post('/cadastrar',function(req, res){
+   var dados = req.body;
+   var data = {apelido : req.body.apelido,
+                nome:req.body.nome,
+                email:req.body.email,
+                senha:req.body.senha };
 
-app.get('/resultado/:score',function(req, res){
-  var pontos = req.params.score;
-  console.log(pontos);
- res.render('jogos/teste',{pontos});
+var connection = app.config.dbConnection();
+var cadastroDAO = new app.DAO.cadastroDAO(connection);
+
+  if(dados.senha != dados.confirmaSenha){
+    console.log("senhas diferentes");
+    res.redirect('/cadastro');
+  }else {
+      cadastroDAO.cadastrar(data,function(error,result){
+        if(error){
+          throw error;
+        }else {
+           res.redirect('/');
+        }
+      })
+  }
 });
+
+//router get score game
+app.post('/pontos',function(req, res){
+  var pontos = req.body.number;
+  console.log(pontos);
+  res.render('jogos/teste',{pontos});
+});
+
 
 module.exports = app;

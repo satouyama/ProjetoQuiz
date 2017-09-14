@@ -4,7 +4,7 @@
   "description": "Some example for using ITIL within a quiz game",
   "main": "app.js",
   "dependencies": {
-    "body-parser": "^1.17.2",
+    "body-parser": "^1.18.1",
     "consign": "^0.1.6",
     "dotenv": "^4.0.0",
     "ejs": "^2.5.7",

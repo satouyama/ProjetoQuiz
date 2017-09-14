@@ -8,7 +8,7 @@
       progress: true
     },
     settings = $.extend(defaults,options),
-    $quizItems = $('[data-quiz-item]'),
+    $quizItems = $('[data-quiz-item]');
     $choices = $('[data-choices]'),
     itemCount = $quizItems.length,
     chosen = [],
@@ -16,6 +16,12 @@
     $label = null;
 
    emcInit();
+   $('[data-quiz-item]').click(function(){
+       var $this = $(this),
+           $next = $this.parent().next();
+
+       $next.scrollTo($next.offset().top, 500, 'linear');
+   });
 
    if (settings.progress) {
       var $bar = $('#emc-progress'),
@@ -92,8 +98,14 @@
 
             $scoreEl.text("você acertou " + acertos + " você ganhou " + "$" + score).addClass('new-score');
               $('html,body').animate({scrollTop: 0}, 50);
-              window.location.assign("/resultado/" + score);
 
+              $.ajax({
+      url: '/pontos',
+      type: 'POST',
+      contentType: 'application/json',
+      data: JSON.stringify({number:acertos})}
+  );
+  window.location.assign("/pontos");
 
     }
 
