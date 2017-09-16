@@ -235,7 +235,7 @@
         contentType: 'application/json',
         data: JSON.stringify({number:score})}
         );
-        window.location.assign("https://www.w3schools.com");
+        window.location.assign("/dashbord");
       },
       home: function() {
         base.methods.reset();
@@ -268,7 +268,7 @@
     gameOverScreen: '#quiz-gameover-screen',
     nextButtonText: 'Next',
     finishButtonText: 'Finish',
-    restartButtonText: 'Restart',
+    restartButtonText: 'Finalizar',
   };
 
 

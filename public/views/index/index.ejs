@@ -1,13 +1,13 @@
 <html lang="pt-br"><head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <script type="text/javascript" src="http://cdnjs.cloudflare.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
-    <script type="text/javascript" src="http://netdna.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
-    <link href="http://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.3.0/css/font-awesome.min.css" rel="stylesheet" type="text/css">
-    <link href="css\index_css" rel="stylesheet" type="text/css">
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+    <script type="text/javascript" src="https://netdna.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.3.0/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+    <link href="css\index.css" rel="stylesheet" type="text/css">
     <link href="http://pingendo.github.io/pingendo-bootstrap/themes/default/bootstrap.css" rel="stylesheet" type="text/css">
-    <title>Show do Milhão</title>
-    <link rel="icon" href="img/show_logo.png" />
+    <title>ITIL QUIZ GAME</title>
+    <link rel="icon" href="img/itil_process.png" />
     <script type="text/javascript">
         window.onload = function(){
             document.getElementById('audiotheme').play();
@@ -65,14 +65,14 @@
                     <i class="fa fa-fw fa-lg fa-user"></i>Entrar</h4>
             </div>
             <div class="modal-body">
-                <form role="form" method="POST" action="/dashbord">
+                <form role="form" method="POST" action="/autenticar">
                     <div class="form-group">
                         <label class="control-label" for="exampleInputEmail1">Login</label>
-                        <input class="form-control" name="input_login_email" id="exampleInputEmail1" placeholder="Digite o seu Login" type="email">
+                        <input class="form-control" name="email" placeholder="Digite o seu Login" type="email">
                     </div>
                     <div class="form-group">
                         <label class="control-label" for="exampleInputPassword1">Senha</label>
-                        <input class="form-control" name="input_login_senha" id="exampleInputPassword1" placeholder="Digite sua Senha" type="password">
+                        <input class="form-control" name="senha" placeholder="Digite sua Senha" type="password">
                     </div>
                     <div align="center">
                         <button type="submit" class="btn btn-primary">Entrar</button>

@@ -22,13 +22,13 @@
         <div class="collapse navbar-collapse" id="navbar-ex-collapse">
           <ul class="nav navbar-nav navbar-right">
             <li class="active">
-              <a href="dashboard.php">Inicio</a>
+              <a href="/dashbord">Inicio</a>
             </li>
 
           </ul>
           <ul class="lead nav navbar-left navbar-nav">
             <li>
-              <a href="dashboard.php">ITIL QUIZ GAME <img src="img/itil_process.png" width="20"></a>
+              <a href="/dashbord">ITIL QUIZ GAME <img src="img/itil_process.png" width="20"></a>
             </li>
           </ul>
         </div>
@@ -80,7 +80,7 @@
           </div>
           <div class="col-md-6">
             <h1 class="text-warning">ITIL QUIZ GAME</h1>
-            <p class="lead text-justify">É um jogo de perguntas e respostas
+            <p class="lead text-justify">O Quiz é um jogo de perguntas e respostas relacionado a ITIL onde é abordado o assunto sobre Transição de serviço.
 
         </div>
       </div>
@@ -89,36 +89,22 @@
       <div class="container">
         <div class="row">
           <div class="col-md-6">
-            <h1 class="text-danger text-left">Ajudas</h1>
+            <h1 class="text-danger text-left">Informações</h1>
             <h3>O candidato conta com vários tipos de ajuda:</h3>
             <ol class="lead" contenteditable="false">
               <li>
-                <b>Universitários</b>&nbsp;- Três estudantes de diversas&nbsp; faculdades
-                davam suas respostas à pergunta e cabia ao participante confiar ou não.</li>
+                <b>Dificuldade</b>&nbsp;- . É constituído por 20 perguntas que são divididas em dois quizzes, o quiz na dificuldade EASY o jogador recebe 1 pontos
+                                                e no HARD 3 pontos.
+               
+                </li>
               <li>
-                <b>Placas</b>&nbsp;- Uma pequena platéia levantava placas numeradas, referentes
-                à alternativa correta. Por exemplo, para a terceira alternativa, levantavam
-                a placa de número 3.</li>
+                <b>Respostas</b>&nbsp;- Cada resposta certa o jogador recebe pontos, que é adicionando ao finalizar o quiz.</li>
               <li>
-                <b>Cartas</b>- Quatro cartas de baralho eram viradas e o participante escolhia
-                uma. Se tirasse:
-                <ul>
-                  <li>
-                    <b>Rei</b>: Nenhuma alternativa errada era eliminada.</li>
-                  <li>
-                    <b>Ás</b>: Elimina uma alternativa.</li>
-                  <li>
-                    <b>2</b>: Elimina duas alternativas.</li>
-                  <li>
-                    <b>3</b>: Elimina todas as três alternativas erradas, restando apenas a correta.</li>
-                  <li></li>
-                </ul>
+                <b>Ranking</b>- O jogador ganhará mais pontos sempre que realiza o quiz, então quanto mais vezes você fizer,
+                 mais pontos recebe.
               </li>
-              <li>
-                <b>Pulos</b>- O participante poderia "pular" a pergunta caso não soubesse
-                a resposta. Poderia utilizar deste recurso até três vezes.</li>
-              <br>
-              <p>Na pergunta final, nenhuma das ajudas poderia ser usada.</p>
+              
+              
             </ol>
           </div>
           <div class="col-md-6">
@@ -136,114 +122,25 @@
           <div class="col-md-6">
             <div></div>
             <div></div>
-            <h1 class="text-center text-warning">Prêmios</h1><table class="table table-condensed table-striped">
+            <h1 class="text-center text-warning">Top Jogador</h1><table class="table table-condensed table-striped">
               <thead>
                 <tr>
-                  <th class="active">#</th>
-                  <th class="success">Acertar</th>
-                  <th class="warning">Parar</th>
-                  <th class="danger">Errar</th>
+                  <th>#</th>
+                  <th>Jogador</th>
+                  <th>Score</th>
                 </tr>
               </thead>
+
+              <%for(i=0; i < data.length ; i++){%>
               <tbody>
-                <tr>
-                  <td class="info">1</td>
-                  <td class="info">R$ 1 mil</td>
-                  <td class="info">R$ 0</td>
-                  <td class="info">R$ 0</td>
-                </tr>
-                <tr>
-                  <td class="active">2</td>
-                  <td class="active">R$ 2 mil</td>
-                  <td class="active">R$ 1 mil</td>
-                  <td class="active">R$ 500</td>
-                </tr>
-                <tr>
-                  <td class="info">3</td>
-                  <td class="info">R$ 3 mil</td>
-                  <td class="info">R$ 2 mil</td>
-                  <td class="info">R$ 1 mil</td>
-                </tr>
-                <tr>
-                  <td class="active">4</td>
-                  <td class="active">R$ 4 mil</td>
-                  <td class="active">R$ 3 mil</td>
-                  <td class="active">R$ 1.500</td>
-                </tr>
-                <tr>
-                  <td class="info">5</td>
-                  <td class="info">R$ 5 mil</td>
-                  <td class="info">R$ 4 mil</td>
-                  <td class="info">R$ 2 mil</td>
-                </tr>
-                <tr>
-                  <td class="active">6</td>
-                  <td class="active">R$ 10 mil</td>
-                  <td class="active">R$ 5 mil</td>
-                  <td class="active">R$ 2.500</td>
-                </tr>
-                <tr>
-                  <td class="info">7</td>
-                  <td class="info">R$ 20 mil</td>
-                  <td class="info">R$ 10 mil</td>
-                  <td class="info">R$ 5 mil</td>
-                </tr>
-                <tr class="active">
-                  <td class="active">8</td>
-                  <td class="active">R$ 30 mil</td>
-                  <td class="active">R$ 20 mil</td>
-                  <td class="active">R$ 10 mil</td>
-                </tr>
-                <tr class="info">
-                  <td>9</td>
-                  <td>R$ 40 mil</td>
-                  <td>R$ 30 mil</td>
-                  <td>R$ 15 mil</td>
-                </tr>
-                <tr class="active">
-                  <td>10</td>
-                  <td>R$ 50 mil</td>
-                  <td>R$ 40 mil</td>
-                  <td>R$ 20 mil</td>
-                </tr>
-                <tr class="info">
-                  <td>11</td>
-                  <td>R$ 100 mil</td>
-                  <td>R$ 50 mil</td>
-                  <td>R$ 25 mil</td>
-                </tr>
-                <tr class="active">
-                  <td class="active">12</td>
-                  <td>R$ 200 mil</td>
-                  <td>R$ 100 mil</td>
-                  <td>R$ 50 mil</td>
-                </tr>
-                <tr class="info">
-                  <td>13</td>
-                  <td>R$ 300 mil</td>
-                  <td>R$ 200 mil</td>
-                  <td>R$ 100 mil</td>
-                </tr>
-                <tr class="active">
-                  <td>14</td>
-                  <td>R$ 400 mil</td>
-                  <td>R$ 300 mil</td>
-                  <td>R$ 150 mil</td>
-                </tr>
-                <tr class="info">
-                  <td>15</td>
-                  <td>R$ 500 mil</td>
-                  <td>R$ 400 mil</td>
-                  <td>R$ 200 mil</td>
-                </tr>
-                <tr class="active">
-                  <td class="active">16</td>
-                  <td>R$ 1 milhão</td>
-                  <td>R$ 500 mil</td>
-                  <td>
-                    <b>R$ 0</b>
-                  </td>
-                </tr>
+
+                    <tr>
+                      <td><%=data[i].id%></td>
+                      <td><%=data[i].nome%></td>
+                      <td><%=data[i].score%></td>
+                    </tr>
+
+                     <%}%>
               </tbody>
             </table>
           </div>
