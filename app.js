@@ -58,7 +58,7 @@ app.use('/ranking',function(req,res,next){
   }
 });
 //midleware session
-app.use('/quiz1',function(req,res,next){
+app.use('/quiz',function(req,res,next){
   if(!req.session.user) {
     res.redirect('/');
     console.log('tentando acessar sem estar logado');
@@ -76,6 +76,7 @@ app.use('/quiz2',function(req,res,next){
   }
 });
 
+
 //set the view for ejs
 app.set('view engine','ejs');
 
@@ -85,7 +86,17 @@ app.set('views','./public/views');
 consign().include('').then('./config/dbConnection.js').then('./DAO').into(app);
 
 // router login
-
+app.post('/testar',function(req, res) {
+   var teste = req.body.number;
+   console.log(teste);
+    
+});
+//router estatistica
+app.get('/estatistica',function(req, res) {
+    var score =req.session.user.score;
+    
+    res.render('jogos/statistic',{score}); 
+});
 // router first game
 app.get('/Quiz1', function (req, res) {
 //  res.send('works fine')
@@ -213,7 +224,24 @@ app.post('/pontos', function(req, res){
    
         cadastroDAO.cadastroPontuacao([score,email],function(error,result){
             if(error) {
-              console.log(error);
+              console.log("Não foi possivel cadastrar a pontuação");
+            } else {
+              console.log('pontuação cadastrada');
+            }
+        });
+});
+
+app.post('/pontosquiz2', function(req, res){
+  var email = req.session.user.email;
+  var pontos = req.session.user.score;
+  var score = (req.body.number * 3) + pontos;
+  console.log(score);
+  var connection = app.config.dbConnection();
+  var cadastroDAO = new app.DAO.cadastroDAO(connection);
+   
+        cadastroDAO.cadastroPontuacao([score,email],function(error,result){
+            if(error) {
+              console.log("Não foi possivel cadastrar a pontuação");
             } else {
               console.log('pontuação cadastrada');
             }
