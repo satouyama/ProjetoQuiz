@@ -234,7 +234,7 @@ app.post('/pontos', function(req, res){
 app.post('/pontosquiz2', function(req, res){
   var email = req.session.user.email;
   var pontos = req.session.user.score;
-  var score = (req.body.number * 3) + pontos;
+  var score = req.body.number + (pontos * 3);
   console.log(score);
   var connection = app.config.dbConnection();
   var cadastroDAO = new app.DAO.cadastroDAO(connection);

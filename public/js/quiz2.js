@@ -6,90 +6,93 @@ $('#quiz').quiz({
   counterFormat: 'Questões %current de %total',
   questions: [
     {
-      'q': 'Quais as atividades do gerenciamento de mudança ?',
+      'q': 'Acerca do Gerenciamento de Configuração e de Ativos de Serviços (GCAS), analise as alternativas abaixo e relacione-as.<p>' + 
+       '    1. ICs internos.<p>' + 
+       '    2. IC’s externo.<p>' +
+       '    3. ICs de interface.<p>'+
+       '    4. ICs organizacionais.<p>' +
+       '( ) Necessidades de clientes externos e acordos com estes.<p>' +
+       '( ) Documentação de descreve a estratégia do negócio, políticas internas.<p>' +
+       '( ) Ativos tangíveis (servidor, roteador) e intangíveis (software necessário para entregar determinado serviço).<p>'+
+       '( ) Que são necessários para entrega do serviço fim a fim.'
+      ,
       'options': [
-        'Registrar, avaliar, autorizar e revisar a mudança.',
-        'Programar a implantação da mudança.',
-        'Coordenar a implantação da mudança.',
-        'Revisar e fechar a requisição da mudança',
-        'Registrar, avaliar, autorizar e revisar a requisição da mudança.'
-      ],
-      'correctIndex': 4,
-      'correctResponse': 'Parabéns',
-      'incorrectResponse': 'Resposta certa: Registrar, avaliar, autorizar e revisar a requisição da mudança.'
-    },
-    {
-      'q': 'Qual o objetivo da transição de serviços ?',
-      'options': [
-        'É garantir que as implantações de serviços sejam gerenciadas de acordo com os requerimentos definidos no ciclo de desenho de serviço.',
-        'É garantir que as implantações de serviços sejam gerenciadas de acordo com os requerimentos definidos no ciclo de estratégia de serviço.',
-        'É garantir que as implantações de serviços sejam gerenciadas de acordo com os requerimentos definidos no ciclo de operação de serviço.',
-        'É garantir que as implantações de serviços sejam gerenciadas de acordo com os requerimentos definidos no ciclo de melhoria contínua.',
-        'É garantir que as implantações de serviços não sejam gerenciadas de acordo com os requerimentos definidos no ciclo de desenho de serviço.'
+        '2, 4, 1 e 3.',
+        '1, 2, 3 e 4.',
+        '2, 4, 3 e 1.',
+        '4, 3, 2 e 1.',
+        '3, 2, 4 e 1.'
       ],
       'correctIndex': 0,
-      'correctResponse': 'Parabéns!',
-      'incorrectResponse': 'Resposta certa: É garantir que as implantações de serviços sejam gerenciadas de acordo com os requerimentos definidos no ciclo de desenho de serviço.'
+      'correctResponse': 'Parabéns',
+      'incorrectResponse': 'A resposta certa é : 2, 4, 1 e 3.'
     },
     {
-      'q': 'Marque a questão incorreta. Os processos do ciclo de transição de serviços são:',
+      'q': 'Banco de Dados do Gerenciamento da Configuração (BDGC’s) e Sistema de Gerenciamento da Configuração (SGC) ambos são elementos de qual entidade maior?',
       'options': [
-        'Planejamento e suporte da transição',
-        'Gerenciamento de mudanças',
-        'Gerenciamento de configuração e de ativos de serviço.',
-        'Planejamento de liberação e implantação.',
-        'Validação e teste de serviço.'
+        'Registro de Ativos.',
+        'Sistema de Gerenciamento da Capacidade.',
+        'Melhoria Contínua.',
+        'Sistema de Gerenciamento de Conhecimento do Serviço (SGCS).',
+        'Banco de Dados de Erros Conhecidos.'
       ],
       'correctIndex': 3,
       'correctResponse': 'Parabéns!',
-      'incorrectResponse': 'Resposta certa: Planejamento de liberação e implantação. '
+      'incorrectResponse': 'Resposta certa: Sistema de Gerenciamento de Conhecimento do Serviço (SGCS)'
     },
     {
-      'q': 'Sobre o gerenciamento de configuração e ativos de serviço.<p>'+
-      'I - O objetivo do gerenciamento da configuração e ativo é definir e controlar os serviços e componentes de TI e manter informações de configuração.<p>'+
-      'II – Item de configuração é um componente físico ou lógico com identificação única que é útil para a entrega de serviço de TI.<p>'+
-      'III – Modelo de configuração é a representação dos itens de configuração agrupados através da identificação de seus relacionamentos.<p>'+
-      'É correto o que se afirma em:',
+      'q': ' Qual das declarações a seguir sobre uma mudança padrão está INCORRETA?',
       'options': [
-        'I Apenas.',
-        'II Apenas.',
-        'I e II Apenas.',
-        'I e III Apenas.',
-        'I,II e III Apenas'
+        'Elas devem ser implementadas o mais rápido possível.',
+        'Elas são pré-autorizadas pelo Gerenciamento de Mudança.',
+        'Elas têm baixo risco.',
+        'Elas seguem um procedimento ou instrução de trabalho.',
+        'Elas possuem um ativados para acionar a mudança.'
       ],
-      'correctIndex': 4,
+      'correctIndex': 0,
       'correctResponse': 'Parabéns!',
-      'incorrectResponse': 'Resposta certa: I,II e III.'
+      'incorrectResponse': 'Resposta certa: Elas devem ser implementadas o mais rápido possível.'
+    },
+    {
+      'q': 'Qual das seguintes é um objetivo do Gerenciamento de Liberação e Implantação?',
+      'options': [
+        ' Padronizar métodos e procedimentos usados para eficiência de todas as Mudanças',
+        'Assegurar que todas as mudanças para ativos de serviço e itens de configuração<p>(IC’s) sejam registradas no Sistema de Gerenciamento da Configuração (SGC).',
+        'Assegurar que o risco da mudança para o negócio é mínimo.',
+        'Definir e acordar planos de liberação e implementação com clientes e partes interessadas.',
+        'Ele deve ser implementado o mais rápido possível.'
+      ],
+      'correctIndex': 3,
+      'correctResponse': 'Parabéns!',
+      'incorrectResponse': 'Resposta certa: Definir e acordar planos de liberação e implementação com clientes e partes interessadas.'
     },
      {
-      'q': 'Algumas das atividades de validação e teste de serviço.<p>'+
-      'I - Validação e gerenciamento de teste.<p>'+
-      'II – Planejar e desenhar teste.<p>'+
-      'III – Verificar o plano de teste e desenho de teste.<p>'+
-      'IV – Preparar o ambiente de teste.<p>'+
-      'É correto o que se afirma em:',
+      'q': 'Qual dos seguintes é a definição CORRETA de uma Unidade de Liberação?',
       'options': [
-        'I Apenas.',
-        'II e III Apenas.',
-        'III Apenas.',
-        'I,III e IV Apenas.',
-        'Todas as alternativas.'
+        'Uma unidade de avaliação de riscos.',
+        'Uma equipe de pessoas responsáveis por Implantar uma liberação.',
+        'Uma função descrita dentro da Transição de Serviço.',
+        'Uma medida de custo.',
+        'A porção de um serviço ou infraestrutura de TI que é normalmente liberada junto.'
       ],
       'correctIndex': 4,
       'correctResponse': 'Parabéns!',
-      'incorrectResponse': 'Resposta certa: Todas as alternativas.'
+      'incorrectResponse': 'Resposta certa: A porção de um serviço ou infraestrutura de TI que é normalmente liberada junto.'
     },
     {
-      'q': 'sobre gerenciamento de configuração e ativo de serviços.<p>'+
-      'Marque a alternativa incorreta.',
+      'q': ' Qual das seguintes atividades são beneficiadas pelo registro de relacionamentos entre itens de configuração (IC’s)?<p>'+
+      '1. Avaliação de impacto e causa de incidentes e problemas.<p>'+
+      '2. Avaliação de impacto e causa de incidentes e problemas.<p>'+
+      '3. Planejamento e desenho de uma mudança para um serviço existente.<p>'+
+      '4. Planejamento de uma autorização de uma tecnologia ou upgrade de software.',
       'options': [
-        'Biblioteca segura é uma área segura onde estão armazenados os softwares, incluindo as versões de teste e homologação.',
-        'Armazém seguro é um local lógico onde são armazenados todos os hardwares da empresa antes de entrarem em produção.',
-        'Peças sobressalentes é uma área reservada para o armazenamento seguro de peças de hardware definitivo.',
-        'Linha de base é a configuração de um item de configuração que tenha sido revista e acordada e serve com parâmetro para auditorias no BDGC e para ponto de retorno da configuração de um item de configuração em caso de falhas de liberação.',
-        'Instantâneo é o estado atual de um item de configuração ou de um conjunto de itens de configuração e serve para auditoria no banco de dados do gerenciamento da configuração.'
+        '1 e 2 apenas.',
+        '1, 2 e 4 apenas.',
+        '1, 3 e 4 apenas.',
+        '1, 2 e 3 apenas.',
+        'Todas acima.'
       ],
-      'correctIndex': 1,
+      'correctIndex': 4,
       'correctResponse': 'Parabéns!',
       'incorrectResponse': 'Resposta certa: Armazém seguro é um local lógico onde são armazenados todos os hardwares da empresa antes de entrarem em produção.'
     },
@@ -111,35 +114,191 @@ $('#quiz').quiz({
       'incorrectResponse': 'Resposta certa: I apenas.'
     },
     {
-      'q': 'Proposta de mudança é uma proposta e avaliação inicial elaborada como um estudo prévio dos impactos, custos e riscos de uma mudança para aprovação da viabilidade da solicitação de uma mudança',
+      'q': 'Qual dos seguintes não é um propósito da Transição de Serviço?',
       'options': [
-        'Verdadeiro',
-        'Falso'
+        'Garantir que um serviço possa ser gerenciado, operado e suportado.',
+        'Fornecer conhecimento sobre o Gerenciamento de Mudanças e Gerenciamento de Liberação e Implantação.',
+        'Fornecer treinamento e certificação em gerenciamento de projetos.',
+        'Planejar e gerenciar requisitos de capacidade e recursos para gerenciar uma liberação.',
+        'Garantir que os ativos necessários para a entrega dos serviços estejam controlados adequadamente.'
       ],
-      'correctIndex': 0,
+      'correctIndex': 2,
       'correctResponse': 'Parabéns!',
-      'incorrectResponse': 'Resposta certa: Verdadeiro.'
+      'incorrectResponse': 'Resposta certa: Fornecer treinamento e certificação em gerenciamento de projetos.'
     },
     {
-      'q': 'Requisição de mudança é uma solicitação formal de uma mudança desprezando os detalhes da mudança solicitada.',
+      'q': 'Qual das seguintes opções é a hierarquia usada no Gerenciamento do Conhecimento?',
       'options': [
-        'Verdadeiro',
-        'Falso'
+        'Sabedoria – Informação – Dados – Conhecimento.',
+        'Dados – Informação – Conhecimento – Sabedoria.',
+        'Conhecimento – Sabedoria – Informação – Dados.',
+        'Informação – Dados – Conhecimento – Sabedoria.',
+        'Informação – Sabedoria – Informação – Dados. '
       ],
       'correctIndex': 1,
       'correctResponse': 'Parabéns!',
-      'incorrectResponse': 'Resposta certa: Falso.'
+      'incorrectResponse': 'Resposta certa: Dados – Informação – Conhecimento – Sabedoria.'
     },
     {
-      'q': 'Instrução de trabalho é um documento contendo instruções detalhadas dos passos a serem seguidos para uma atividade a ser executada dentro de um registo de mudança.',
+      'q': 'Qual das seguintes áreas a tecnologia pode ajudar a suportar durante o estágio Transição de Servido do ciclo de vida?<p>'+
+      '1. Data mining e ferramentas de workflow.<p>'+
+      '2. Sistemas de medição e relatórios.<p>'+
+      '3. Tecnologias de liberação e implantação<p>'+
+      '4. Desenhos de Processos.',
       'options': [
-        'Verdadeiro',
-        'Falso'
+        '1 e 2 apenas.',
+        '1, 2 e 4 apenas.',
+        '1, 3 e 4 apenas.',
+        '1, 2 e 3 apenas.',
+        'Todas acima.'
+      ],
+      'correctIndex': 3,
+      'correctResponse': 'Parabéns!',
+      'incorrectResponse': 'Resposta certa:1, 2 e 3 apenas.'
+    },
+    // continuação
+    {
+      'q': 'Quais dos grupos de processos abaixo estão descritos no livro de Transição de Serviços da ITIL?',
+      'options': [
+        'Gerenciamento de Mudança, Gerenciamento de Configuração e de Ativo de Serviço, Gerenciamento de Incidente.',
+        'Gerenciamento de Demanda, Gerenciamento de Capacidade, Gerenciamento de Nível de Serviço.',
+        'Gerenciamento de Incidente, Gerenciamento de Problema, Cumprimento de Requisição.',
+        'Gerenciamento de Mudança, Gerenciamento de Conhecimento, Gerenciamento de Capacidade.',
+        'Gerenciamento de Mudança, Gerenciamento de Configuração e de Ativo de Serviço, Gerenciamento de Liberação e Implantação.'
+      ],
+      'correctIndex': 4,
+      'correctResponse': 'Parabéns!',
+      'incorrectResponse': 'Resposta certa:Gerenciamento de Mudança, Gerenciamento de Configuração e de Ativo de Serviço, Gerenciamento de Liberação e Implantação.'
+    },
+    {
+      'q': 'Qual das seguintes declarações está CORRETA?',
+      'options': [
+        'O sistema de Gerenciamento da Configuração faz parte do Banco de Dados de Erros Conhecidos (BDEC).',
+        'O sistema de Gerenciamento de Conhecimento de Serviço faz parte do Sistema de Gerenciamento da Configuração (SGC).',
+        'O sistema de Gerenciamento da Configuração faz parte do Sistema de Gerenciamento do Conhecimento de Serviço (SGCS).',
+        'O sistema de Gerenciamento da Configuração faz parte do Banco de Dados dep Gerenciamento da Configuração (BDGC).',
+        'O sistema de Gerenciamento de Conhecimento de Serviço faz parte do Banco de Dados de Erros Conhecidos (BDEC).'
+      ],
+      'correctIndex': 2,
+      'correctResponse': 'Parabéns!',
+      'incorrectResponse': 'Resposta certa:O sistema de Gerenciamento da Configuração faz parte do Sistema de Gerenciamento do Conhecimento de Serviço (SGCS).'
+    },
+    {
+      'q': 'Qual das seguintes declarações MELHOR descreve uma Biblioteca de Mídia Definitiva (BMD)?',
+      'options': [
+        'Uma localização segura onde peças de hardware são mantidas.',
+        'Uma biblioteca segura onde versões autorizadas definitivas de todos os itens de configuração de software são armazenadas e protegidas.',
+        'Uma banco de dados que contém definições de todos os IC’s e tipos de mídia.',
+        'Uma biblioteca segura onde versões autorizadas definitivas de todos os softwares e backups são armazenadas e protegidas.',
+        'Uma biblioteca segura onde os backups são armazenados e protegidos.'
+      ],
+      'correctIndex': 1,
+      'correctResponse': 'Parabéns!',
+      'incorrectResponse': 'Resposta certa:Uma biblioteca segura onde versões autorizadas definitivas de todos os itens de configuração de software são armazenadas e protegidas.'
+    },
+     {
+      'q': 'Qual dos seguintes melhor descreve uma autoridade de mudança?',
+      'options': [
+        'O Comitê Consultivo de Mudanças.',
+        'Alguém com o maior poder hierárquico para tomar decisões sobre quais mudanças deveriam ser aprovadas.',
+        'Um papel, pessoa ou grupo de pessoas que fornece autorização formal para cada tipo de mudança.',
+        'O gerente de Mudança que fornece autorização formal para cada mudança.',
+        'O dono do Serviço que fornece autorização formal para cada mudança.'
+      ],
+      'correctIndex': 2,
+      'correctResponse': 'Parabéns!',
+      'incorrectResponse': 'Resposta certa:Um papel, pessoa ou grupo de pessoas que fornece autorização formal para cada tipo de mudança.'
+    },
+    {
+      'q': 'A Transição de Serviço efetiva pode melhorar significamente a habilidade do provedor de serviços em lidar com volumes de quê?',
+      'options': [
+        'Requisições de Serviço.',
+        'Eventos e Liberações.',
+        'Incidentes e Problemas.',
+        'Redefinição de Senhas.',
+        'Mudanças e Liberações.'
+      ],
+      'correctIndex': 4,
+      'correctResponse': 'Parabéns!',
+      'incorrectResponse': 'Resposta certa:Mudanças e Liberações.'
+    },
+    {
+      'q': 'Qual é o nome da área onde versões definitivas de todas as mídias de Itens de Configuração são armazenadas e protegidas?',
+      'options': [
+        'Biblioteca de Mídia Definitiva.',
+        'Armazém de Software Definitivo.',
+        'Biblioteca Segura de Software.',
+        'Sistema de Gerenciamento do Conhecimento de Serviço.',
+        'Biblioteca de Mídia Temporária.'
       ],
       'correctIndex': 0,
       'correctResponse': 'Parabéns!',
-      'incorrectResponse': 'Resposta certa: Verdadeiro.'
+      'incorrectResponse': 'Resposta certa:Biblioteca de Mídia Definitiva.'
+    },
+     {
+      'q': 'Qual declaração sobre o Comitê Consultivo de Mudança Emergencial (CCME) está CORRETA?',
+      'options': [
+        'O CCME irá ser usado para mudanças emergenciais onde pode não existir tempo para acionar um Comitê Consultivo de Mudança (CCM).',
+        'O CCME considera cada Requisição de Mudança com alta prioridade.',
+        'Entre os deveres do CCME está a revisão de mudanças emergenciais realizadas.',
+        'O CCME será presidido pelo Gerente de TI.',
+        'O CCME será usando para mudanças não emergenciais.'
+      ],
+      'correctIndex': 0,
+      'correctResponse': 'Parabéns!',
+      'incorrectResponse': 'Resposta certa:O CCME irá ser usado para mudanças emergenciais onde pode não existir tempo para acionar um Comitê Consultivo de Mudança (CCM).'
+    },
+    {
+      'q': 'Qual dos seguintes o processo de gerenciamento de liberação e implantação trata?<p>'+
+      ' I - Definição e acordo sobre planos e implantação.<p>'+
+      ' II- Garantir de que os pacotes de liberação possam ser rastreados.<p>'+
+      ' III - Autorização de mudanças para suportas o processo.',
+      'options': [
+        '1 e 2 apenas.',
+        '1 e 3 apenas.',
+        '2 e 3 apenas.',
+        'Todas acima.',
+        'Nenhuma acima.'
+      ],
+      'correctIndex': 0,
+      'correctResponse': 'Parabéns!',
+      'incorrectResponse': 'Resposta certa:1 e 2 apenas'
+    },
+    {
+      'q': 'Qual dos seguintes são exemplos de ferramentas que podem dar suporte a etapa da transição de serviço do ciclo de vida de serviço?<p>'+
+      ' I - Uma ferramenta para armazenar versões definitivas de software.<p>'+
+      ' II- Uma ferramenta do fluxo de trabalho para gerenciar mudanças.<p>'+
+      ' III-Uma ferramenta de distribuição automática de software.<p>'+
+      ' IV- Ferramentas de teste e validação.',
+      'options': [
+        '1 e 2 apenas.',
+        '1,3 e 4 apenas.',
+        '1,2 e 3 apenas.',
+        '2,3 e 4 apenas.',
+        'Todas acima.'
+      ],
+      'correctIndex': 4,
+      'correctResponse': 'Parabéns!',
+      'incorrectResponse': 'Resposta certa:Todas acima'
+    },
+    {
+      'q': 'Qual dos seguintes seria armazenado na Biblioteca de Mídia Definitiva (BDM)?<p>'+
+      ' I - Cópias de software comprado.<p>'+
+      ' II- Cópias de software desenvolvido internamente.<p>'+
+      ' III-Documentação relacionada à licença.<p>'+
+      ' IV- A programação de Mudança.',
+      'options': [
+        '1 e 2 apenas.',
+        '1,3 e 4 apenas.',
+        '1,2 e 3 apenas.',
+        '2,3 e 4 apenas.',
+        'Todas acima.'
+      ],
+      'correctIndex': 2,
+      'correctResponse': 'Parabéns!',
+      'incorrectResponse': 'Resposta certa:1,2 e 3 apenas.'
     }
+    
   ]
   
 

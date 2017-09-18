@@ -269,7 +269,7 @@
     startButton: '#quiz-start-btn',
     homeButton: '#quiz-home-btn',
     resultsScreen: '#quiz-results-screen',
-    resultsFormat: 'Acertou %score out of %total correct!',
+    resultsFormat: 'Acertou %score de %total',
     gameOverScreen: '#quiz-gameover-screen',
     nextButtonText: 'Próximo',
     finishButtonText: 'Finish',
