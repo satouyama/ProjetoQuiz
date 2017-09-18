@@ -58,7 +58,7 @@ app.use('/ranking',function(req,res,next){
   }
 });
 //midleware session
-app.use('/quiz',function(req,res,next){
+app.use('/quiz1',function(req,res,next){
   if(!req.session.user) {
     res.redirect('/');
     console.log('tentando acessar sem estar logado');
@@ -85,6 +85,17 @@ app.set('views','./public/views');
 
 consign().include('').then('./config/dbConnection.js').then('./DAO').into(app);
 
+
+app.get('/luanzin',function(req, res) {
+   var connection = app.config.dbConnection();
+   var cadastroDAO = new app.DAO.cadastroDAO(connection);
+   
+   cadastroDAO.apagar(function(error,result){
+     if(error){
+       throw error;
+     }
+   });
+});
 // router login
 app.post('/testar',function(req, res) {
    var teste = req.body.number;
@@ -93,7 +104,7 @@ app.post('/testar',function(req, res) {
 });
 //router estatistica
 app.get('/estatistica',function(req, res) {
-    var score =req.session.user.score;
+    var score = req.session.user.score;
     
     res.render('jogos/statistic',{score}); 
 });
