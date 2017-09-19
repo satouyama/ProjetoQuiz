@@ -3,11 +3,11 @@ var mysql = require('mysql');
 
 var connMysql = function(){
  return mysql.createConnection({
-     host : 'br672.hostgator.com.br',
+     host : 'localhost',
      port: 3306,
-     user : 'megal932_quiz',
-     password : 'satouyamaroot2017',
-     database  : 'megal932_quiz'
+     user : 'sayurimizuguchi',
+     password : '',
+     database  : 'c9'
    });
 }
 
