@@ -86,16 +86,7 @@ app.set('views','./public/views');
 consign().include('').then('./config/dbConnection.js').then('./DAO').into(app);
 
 
-app.get('/luanzin',function(req, res) {
-   var connection = app.config.dbConnection();
-   var cadastroDAO = new app.DAO.cadastroDAO(connection);
-   
-   cadastroDAO.apagar(function(error,result){
-     if(error){
-       throw error;
-     }
-   });
-});
+
 // router login
 app.post('/testar',function(req, res) {
    var teste = req.body.number;

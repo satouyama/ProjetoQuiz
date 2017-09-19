@@ -18,9 +18,7 @@ cadastroDAO.prototype.cadastrar = function(data,callback){
    this._connection.query("insert into usuario set ?",data,callback);
 }
 
-cadastroDAO.prototype.apagar = function(callback){
-   this._connection.query("truncate table usuario",callback);
-}
+
 
 module.exports = function(){
     return cadastroDAO;
